@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javascript fundamentals 3</title>
+    <title>Javascript Fundamentals 3</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -13,25 +13,33 @@
       let addNumber = 5;
       let multiplyNumber = 10;
       let capitalizeText = "This Should BE UpperCase";
-      let lastLetter = "abcd";
-
+      let lastString = "abcd";
       
-      
-      function add7 () {
-          addNumber += 7;
-          console.log(addNumber);
+      function add7 (number) {
+        return number += 7;
       }
 
-      function multiply (one, two) {
-        multiplyNumber = multiplyNumber * addNumber;
+      function multiply (multiply1, multiply2) {
+        multiplyNumber = multiply1 * multiply2;
         console.log(multiplyNumber);
       }
 
-      function capitalize (text)
+      function capitalize (text) {
+          capitalizeText = text.toUpperCase();
+        console.log(capitalizeText);
+      }
 
+      function lastLetter () {
+        let lastLetterSlice = lastString.slice(-1);
+        console.log(lastLetterSlice);
+      }
 
-      add7(addNumber);
+      addNumber = add7(addNumber);
+      console.log(addNumber);
       multiply(addNumber, multiplyNumber);
+      capitalize(capitalizeText);
+      lastLetter (lastString);
+
 
     </script>
   </body>
