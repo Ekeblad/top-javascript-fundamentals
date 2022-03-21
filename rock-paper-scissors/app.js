@@ -40,5 +40,3 @@ const playerSelection = playerPlay(selection);
 let roundWinner = playRound(playerSelection, computerSelection);
 
 
-
-
