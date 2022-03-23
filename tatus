@@ -1,0 +1,41 @@
+[33mcommit 6f257de590f98c84795727446b401cac9ed96856[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Andreas Ekeblad <aekeblad@gmail.com>
+Date:   Tue Mar 22 15:33:25 2022 +0100
+
+    added a folder for loops exercises from MDN
+
+[33mcommit add577ff76b7b26614838971af4963a92377e227[m
+Author: Andreas Ekeblad <aekeblad@gmail.com>
+Date:   Tue Mar 22 07:47:12 2022 +0100
+
+    rockpaperscissors now plays 5 rounds in console
+
+[33mcommit 1aa5d2da64d99a55b3a000142a90dac38eeb3f89[m
+Author: Andreas Ekeblad <aekeblad@gmail.com>
+Date:   Mon Mar 21 17:16:04 2022 +0100
+
+    this time with fizzbuzz folder included..
+
+[33mcommit 977896c086c5e7f8a55b2be36a6b3d41dc83a257[m
+Author: Andreas Ekeblad <aekeblad@gmail.com>
+Date:   Mon Mar 21 17:14:29 2022 +0100
+
+    fizzbuzz and rock, paper &  scissors setup
+
+[33mcommit cbde6eb03cbec5c85fc0de23fc852e42a0811cf7[m
+Author: Andreas Ekeblad <aekeblad@gmail.com>
+Date:   Fri Mar 18 07:54:00 2022 +0100
+
+    several updates and small assignments inside the practice folder
+
+[33mcommit 69b2b50b187827be5d7b4d909436a7fa4185f8b9[m
+Author: Andreas Ekeblad <aekeblad@gmail.com>
+Date:   Wed Mar 16 15:07:13 2022 +0100
+
+    added a practice folder to do small assignments in
+
+[33mcommit 2af86562a8f27c1bbb99790ff7022aed8786d7b3[m
+Author: Andreas Ekeblad <72961549+Ekeblad@users.noreply.github.com>
+Date:   Tue Mar 15 15:10:41 2022 +0100
+
+    Initial commit
