@@ -6,41 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript Fundamentals 3</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="#">
+    <link rel="shortcut icon" href="#" />
   </head>
   <body>
     Hello
     <script>
-      let addNumber = 5;
-      let multiplyNumber = 10;
-      let capitalizeText = "This Should BE UpperCase";
-      let lastString = "abcd";
-      
-      function add7 (number) {
-        return number += 7;
+      // let addNumber = 5;
+      // let multiplyNumber = 10;
+      // let capitalizeText = "This Should BE UpperCase";
+      // let lastString = "abcd";
+
+      // function add7 (number) {
+      //   return number += 7;
+      // }
+
+      // function multiply (multiply1, multiply2) {
+      //   multiplyNumber = multiply1 * multiply2;
+      //   console.log(multiplyNumber);
+      // }
+
+      // function capitalize (text) {
+      //     capitalizeText = text.toUpperCase();
+      //   console.log(capitalizeText);
+      // }
+
+      // function lastLetter () {
+      //   let lastLetterSlice = lastString.slice(-1);
+      //   console.log(lastLetterSlice);
+      // }
+
+      // console.log(addNumber = add7(addNumber));
+      // multiply(addNumber, multiplyNumber);
+      // capitalize(capitalizeText);
+      // lastLetter (lastString);
+      // let input = 0;
+
+      // while (input < 100) {
+      //   input = prompt("Write a number larger than 100");
+      //   console.log("Try Again");
+      // }
+
+      //Prime numbers exercise
+
+      let n = prompt("Write a number between 10-100");
+
+      for (let i = 0; i <= n; i++) {
+        if (n % i == 0) {
+          console.log(n + "is a prime number");
+        }
       }
-
-      function multiply (multiply1, multiply2) {
-        multiplyNumber = multiply1 * multiply2;
-        console.log(multiplyNumber);
-      }
-
-      function capitalize (text) {
-          capitalizeText = text.toUpperCase();
-        console.log(capitalizeText);
-      }
-
-      function lastLetter () {
-        let lastLetterSlice = lastString.slice(-1);
-        console.log(lastLetterSlice);
-      }
-
-      console.log(addNumber = add7(addNumber));
-      multiply(addNumber, multiplyNumber);
-      capitalize(capitalizeText);
-      lastLetter (lastString);
-
-
     </script>
   </body>
 </html>
