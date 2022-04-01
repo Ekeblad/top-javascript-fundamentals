@@ -8,10 +8,10 @@ function computerPlay() {
   return selection[randomise];
 }
 
-function playerPlay() {
-  const selectedItem = prompt("Select Rock, Paper or Scissors?");
-  return selectedItem;
-}
+//function playerPlay() {
+//   const selectedItem = prompt("Select Rock, Paper or Scissors?");
+//   return selectedItem;
+// }
 
 function playRound(player, computer) {
   player = player.toUpperCase();
@@ -37,12 +37,16 @@ function playRound(player, computer) {
 }
 
 function game() {
-  for (let i = 0; i < 5; i++) {
-    const computerSelection = computerPlay(selection);
-    const playerSelection = playerPlay(selection);
-    playRound(playerSelection, computerSelection);
-  }
+  const computerSelection = computerPlay(selection);
+  const playerSelection = playerPlay(selection);
+  playRound(playerSelection, computerSelection);
 }
+//   for (let i = 0; i < 5; i++) {
+//     const computerSelection = computerPlay(selection);
+//     const playerSelection = playerPlay(selection);
+//     playRound(playerSelection, computerSelection);
+//   }
+// }
 
 // const computerSelection = computerPlay(selection);
 // const playerSelection = playerPlay(selection);
