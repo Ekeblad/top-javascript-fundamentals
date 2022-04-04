@@ -26,10 +26,17 @@
       <button data-clicked="PAPER" class="btn">✋</button>
       <button data-clicked="SCISSORS" class="btn">✌</button>
     </div>
-    <div class="container container-column">
-      <div class="roundresult">Result:</div>
-      <div class="currentscore">Current Score:</div>
+    <div class="container flex">
+      <div>Player Selected:</div>
+      <div id="playerSelection">?</div>
+      <div>Computer Selected:</div>
+      <div id="computerSelection">?</div>
     </div>
+    <div class="flex">
+      <div id="result">Result:</div>
+      <div id="currentScore">Current Score:</div>
+    </div>
+
     <script src="./app.js"></script>
   </body>
 </html>

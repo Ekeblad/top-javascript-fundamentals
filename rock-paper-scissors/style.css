@@ -24,13 +24,18 @@ body {
   height: 30vh;
   gap: 32px;
 }
-.container-column {
-  flex-direction: column;
+.flex {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   height: 10vh;
+  gap: 50px;
 }
 
 .btn {
-  width: 25vw;
+  width: 15vw;
   height: 80px;
   font-family: "Montserrat", sans-serif;
   background-color: var(--primary-light);
@@ -61,7 +66,8 @@ body {
 }
 
 .title-image {
-  width: 30%;
+  margin-top: 16px;
+  width: 30vh;
   height: auto;
   padding: 8px;
   background-color: var(--primary-pink);

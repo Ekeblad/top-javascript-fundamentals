@@ -1,8 +1,15 @@
 const selection = ["ROCK", "PAPER", "SCISSORS"];
 let roundResult = "";
-const buttons = document.querySelectorAll("button");
+
 playerScore = 0;
 computerScore = 0;
+
+//UI import
+const buttons = document.querySelectorAll("button");
+const result = document.getElementById("result");
+const currentScore = document.getElementById("currentScore");
+const playerClicked = document.getElementById("playerSelection");
+const computerClicked = document.getElementById("computerSelection");
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
@@ -12,32 +19,46 @@ buttons.forEach((btn) => {
 
 function computerPlay() {
   const randomise = Math.floor(Math.random() * 3);
-  console.log(randomise);
   return selection[randomise];
 }
 
 function handleClick(playerSelection) {
   const computerSelection = computerPlay(selection);
   playRound(playerSelection, computerSelection);
+
+  if (playerScore === 5) {
+    playerScore = 0;
+    computerScore = 0;
+    alert("Player Won!");
+  }
+
+  if (computerScore === 5) {
+    playerScore = 0;
+    computerScore = 0;
+    alert("Computer Won! :( ");
+  }
 }
 
 function playRound(player, computer) {
-  console.log("Player chose: " + player);
-  console.log("Computer chose: " + computer);
+  playerClicked.textContent = player;
+  computerClicked.textContent = computer;
 
   if (player === computer) {
-    console.log("We selected the same alternative, no winners");
     roundResult = "TIE";
   } else if (
     (player === "ROCK" && computer === "SCISSORS") ||
     (player === "PAPER" && computer === "ROCK") ||
     (player === "SCISSORS" && computer === "PAPER")
   ) {
-    console.log((roundResult = "Player Won"));
     playerScore++;
+    roundResult = "WIN";
   } else {
-    console.log((roundResult = "Computer Won"));
     computerScore++;
+    roundResult = "LOSE";
   }
+  result.textContent = "Result: " + roundResult;
+  currentScore.textContent =
+    "Player " + playerScore + " - " + computerScore + " Computer";
+
   return roundResult;
 }
