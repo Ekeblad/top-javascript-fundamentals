@@ -1,21 +1,27 @@
-const selection = ["Rock", "Paper", "Scissors"];
+const selection = ["ROCK", "PAPER", "SCISSORS"];
 let roundResult = "";
+const buttons = document.querySelectorAll("button");
 playerScore = 0;
 computerScore = 0;
 
+buttons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    handleClick(btn.dataset.clicked);
+  });
+});
+
 function computerPlay() {
   const randomise = Math.floor(Math.random() * 3);
+  console.log(randomise);
   return selection[randomise];
 }
 
-//function playerPlay() {
-//   const selectedItem = prompt("Select Rock, Paper or Scissors?");
-//   return selectedItem;
-// }
+function handleClick(playerSelection) {
+  const computerSelection = computerPlay(selection);
+  playRound(playerSelection, computerSelection);
+}
 
 function playRound(player, computer) {
-  player = player.toUpperCase();
-  computer = computer.toUpperCase();
   console.log("Player chose: " + player);
   console.log("Computer chose: " + computer);
 
@@ -35,21 +41,3 @@ function playRound(player, computer) {
   }
   return roundResult;
 }
-
-function game() {
-  const computerSelection = computerPlay(selection);
-  const playerSelection = playerPlay(selection);
-  playRound(playerSelection, computerSelection);
-}
-//   for (let i = 0; i < 5; i++) {
-//     const computerSelection = computerPlay(selection);
-//     const playerSelection = playerPlay(selection);
-//     playRound(playerSelection, computerSelection);
-//   }
-// }
-
-// const computerSelection = computerPlay(selection);
-// const playerSelection = playerPlay(selection);
-game();
-
-console.log(playerScore + " - " + computerScore);

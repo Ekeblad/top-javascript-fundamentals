@@ -6,18 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock-Paper-Scissors</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="container container-column">
-      <div class="currentscore">Current Score</div>
-      <div class="roundresult">Result</div>
+    <div class="container">
+      <img
+        class="title-image"
+        src="/img/rock-paper-scissors.png"
+        alt="rock-paper-scissors"
+      />
     </div>
     <div class="container">
-      <button data-selection="ROCK" class="btn">Rock</button>
-      <button data-selection="PAPER" class="btn">Paper</button>
-      <button data-selection="SCISSORS" class="btn">Scissors</button>
+      <button data-clicked="ROCK" class="btn">✊</button>
+      <button data-clicked="PAPER" class="btn">✋</button>
+      <button data-clicked="SCISSORS" class="btn">✌</button>
     </div>
-
+    <div class="container container-column">
+      <div class="roundresult">Result:</div>
+      <div class="currentscore">Current Score:</div>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>
