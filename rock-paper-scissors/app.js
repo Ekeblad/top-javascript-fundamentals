@@ -10,12 +10,19 @@ const result = document.getElementById("result");
 const currentScore = document.getElementById("currentScore");
 const playerClicked = document.getElementById("playerSelection");
 const computerClicked = document.getElementById("computerSelection");
+const endgameModal = document.getElementById("endgameModal");
+const endgameMsg = document.getElementById("endgameMsg");
+const overlay = document.getElementById("overlay");
+const restartBtn = document.getElementById("restartBtn");
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     handleClick(btn.dataset.clicked);
   });
 });
+
+restartBtn.addEventListener("click", restartGame);
+overlay.addEventListener("click", closeEndgameModal);
 
 function computerPlay() {
   const randomise = Math.floor(Math.random() * 3);
@@ -29,13 +36,15 @@ function handleClick(playerSelection) {
   if (playerScore === 5) {
     playerScore = 0;
     computerScore = 0;
-    alert("Player Won!");
+    endgameMsg.textContent = "You won!";
+    openEndgameModal();
   }
 
   if (computerScore === 5) {
     playerScore = 0;
     computerScore = 0;
-    alert("Computer Won! :( ");
+    endgameMsg.textContent = "You lost...";
+    openEndgameModal();
   }
 }
 
@@ -61,4 +70,21 @@ function playRound(player, computer) {
     "Player " + playerScore + " - " + computerScore + " Computer";
 
   return roundResult;
+}
+
+function openEndgameModal() {
+  endgameModal.classList.add("active");
+  overlay.classList.add("active");
+}
+
+function closeEndgameModal() {
+  endgameModal.classList.remove("active");
+  overlay.classList.remove("active");
+}
+
+function restartGame() {
+  endgameModal.classList.remove("active");
+  overlay.classList.remove("active");
+  playerScore = 0;
+  computerScore = 0;
 }
